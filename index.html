@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PomoGochi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <span class="logo-box" aria-hidden="true">⚡</span>
+      <span class="brand-name">PomoGochi</span>
+    </div>
+
+    <nav class="nav-links" aria-label="Main Navigation">
+      <button type="button" class="nav-btn" data-view="progress-view">Progress</button>
+      <button type="button" class="nav-btn active" data-view="dashboard-view">Dashboard</button>
+      <button type="button" class="nav-btn" data-view="streak-view">Quiz Streak</button>
+    </nav>
+
+    <div class="user-controls">
+      <span class="user-icon" aria-hidden="true">👤</span>
+      <span id="username-display" class="username">Student</span>
+      <button type="button" id="logout-btn" class="logout-btn">Logout</button>
+    </div>
+  </header>
+
+  <main class="main-frame">
+    <!-- Dashboard View (With Sunny Meadow Habitat) -->
+    <section id="dashboard-view" class="view habitat-card active-view">
+      <h1 class="visually-hidden">Dashboard</h1>
+      <div class="pet-stage-wrapper">
+        <div id="dashboard-pet" class="pet-display pet-idle" role="img" aria-label="PomoGochi Virtual Pet"></div>
+        <div class="pet-shadow"></div>
+      </div>
+      <p id="pet-stage-label" class="stage-pill">Stage 1: PomoPup</p>
+      <a href="app.html" class="quiz-trigger" aria-label="Answer Quiz">
+        <span class="plus-circle">+</span>
+        <span class="trigger-label-pill">Answer Quiz</span>
+      </a>
+    </section>
+
+    <!-- Quiz Streak View (With Sunny Meadow Habitat) -->
+    <section id="streak-view" class="view habitat-card hidden">
+      <h2 class="visually-hidden">Quiz Streak</h2>
+      <div class="pet-stage-wrapper">
+        <div id="streak-pet" class="pet-display pet-idle" role="img" aria-label="PomoGochi Virtual Pet"></div>
+        <div class="pet-shadow"></div>
+      </div>
+      <div class="streak-box">
+        🔥 <strong id="streak-count">0</strong>-DAY STREAK
+      </div>
+      <p class="stage-label habitat-subpill">Current Pet Level: <strong id="streak-pet-level">1</strong></p>
+    </section>
+
+    <!-- Progress View -->
+    <section id="progress-view" class="view progress-card hidden">
+      <div class="progress-header">
+        <div id="progress-pet" class="pet-avatar-small" role="img" aria-label="Pet Avatar"></div>
+        <div>
+          <h2 id="pet-name">PomoGochi</h2>
+          <p id="progress-stage-text" class="stage-subtext">Stage 1: PomoPup</p>
+        </div>
+      </div>
+
+      <div class="stat-badges">
+        <div class="stat-badge badge-gold">
+          🏆 Lvl: <strong id="pet-level">1</strong>
+        </div>
+        <div class="stat-badge badge-blue">
+          ⚡ Exp: <strong id="pet-exp">0</strong> / 100
+          <div class="exp-bar-track">
+            <div id="exp-bar-fill" class="exp-bar-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+        <div class="stat-badge badge-green">
+          ⭐ Total Score: <strong id="total-score">0</strong>
+        </div>
+      </div>
+
+      <!-- Evolution Roadmap -->
+      <div class="evolution-section">
+        <h3 class="evo-title">Evolution Forms</h3>
+        <div class="evo-cards">
+          <div id="evo-stage-1" class="evo-card unlocked">
+            <div id="evo-icon-1" class="evo-mini-pet"></div>
+            <span class="evo-name">PomoPup</span>
+            <span class="evo-req">Lv 1</span>
+          </div>
+          <div id="evo-stage-2" class="evo-card">
+            <div id="evo-icon-2" class="evo-mini-pet"></div>
+            <span class="evo-name">PomoPaw</span>
+            <span class="evo-req">Lv 3</span>
+          </div>
+          <div id="evo-stage-3" class="evo-card">
+            <div id="evo-icon-3" class="evo-mini-pet"></div>
+            <span class="evo-name">PomoChamp</span>
+            <span class="evo-req">Lv 5</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

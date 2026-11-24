@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PomoGochi - Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="brand">
+      <span class="logo-box" aria-hidden="true">⚡</span>
+      <span class="brand-name">PomoGochi</span>
+    </div>
+
+    <nav class="nav-links" aria-label="Quiz Navigation">
+      <a href="index.html" class="nav-btn">← Back to Dashboard</a>
+    </nav>
+
+    <div class="user-controls">
+      <span class="user-icon" aria-hidden="true">👤</span>
+      <span class="username">Student</span>
+    </div>
+  </header>
+
+  <main class="main-frame">
+    <section id="quiz-box" class="quiz-container" aria-live="polite">
+      <div class="quiz-progress-track">
+        <div id="quiz-progress-fill" class="quiz-progress-fill" style="width: 0%;"></div>
+      </div>
+      <p id="question-counter" class="question-counter">Question 1 of 3</p>
+      <h1 id="question-text" class="question-text">Loading question...</h1>
+      <div id="choices-container" class="choices-grid"></div>
+
+      <!-- Feedback & Explanation Box -->
+      <div id="feedback-box" class="feedback-box hidden">
+        <p id="feedback-text" class="feedback-title"></p>
+        <p id="explanation-text" class="explanation-text"></p>
+      </div>
+
+      <button type="button" id="next-btn" class="primary-pill-btn hidden">Next Question</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
